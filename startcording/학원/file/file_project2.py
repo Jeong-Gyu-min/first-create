@@ -1,0 +1,11 @@
+prev_file = open("C:/Users/wjdrb/OneDrive/바탕 화면/PythonWorkspace/학원/section13/input/연락처.txt", "rt")
+buffer = prev_file.read()
+n = buffer.count("\"011-")
+buffer = buffer.replace("\"011-", "\"010-")
+print("총 {}건의 011 데이터를 찾았습니다..".format(n))
+prev_file.close()
+
+new_file = open("C:/Users/wjdrb/OneDrive/바탕 화면/PythonWorkspace/학원/section13/input/연락처.txt", "wt")
+new_file.write(buffer)
+new_file.close()
+print("모든 데이터를 수정했습니다.")
